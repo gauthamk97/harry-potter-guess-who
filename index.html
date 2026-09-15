@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harry Potter Guess Who</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Harry Potter: Guess Who?</h1>
+  <p>Click a witch, wizard, or magical creature to flip their card face-down as you narrow down your guess.</p>
+</header>
+
+<main class="board" id="board"></main>
+
+<div class="reveal" id="reveal">
+  <span class="reveal-label">Your Character</span>
+  <img id="reveal-portrait" class="reveal-portrait" src="" alt="">
+  <span id="reveal-name" class="reveal-name"></span>
+</div>
+
+<footer>
+  <p>66 characters from the Wizarding World.</p>
+  <button type="button" id="new-game-btn" class="new-game-btn">New Game</button>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
