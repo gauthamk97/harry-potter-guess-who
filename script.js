@@ -164,6 +164,8 @@ function startNewGame() {
 
 function init() {
   buildBoard();
+  document.getElementById("character-count").textContent =
+    `${ALL_CHARACTERS.length} characters from the Wizarding World.`;
   document.getElementById("new-game-btn").addEventListener("click", startNewGame);
 }
 
