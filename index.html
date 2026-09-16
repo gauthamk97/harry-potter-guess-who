@@ -28,6 +28,7 @@
 <header>
   <h1>Harry Potter: Guess Who?</h1>
   <p>Click a witch, wizard, or magical creature to flip their card face-down as you narrow down your guess.</p>
+  <div class="open-counter" id="open-counter"></div>
 </header>
 
 <main class="board" id="board"></main>
@@ -40,7 +41,10 @@
 
 <footer>
   <p id="character-count"></p>
-  <button type="button" id="new-game-btn" class="new-game-btn">New Game</button>
+  <div class="footer-buttons">
+    <button type="button" id="new-game-btn" class="new-game-btn">New Game</button>
+    <button type="button" id="reorganize-btn" class="reorganize-btn">Move Closed to Bottom</button>
+  </div>
 </footer>
 
 <script src="script.js"></script>

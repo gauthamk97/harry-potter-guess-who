@@ -97,11 +97,12 @@ const CATEGORIES = [
 
 const ALL_CHARACTERS = CATEGORIES.flatMap((category) => category.characters);
 const ALL_CARDS = [];
+let grid = null;
 
 function buildBoard() {
   const board = document.getElementById("board");
 
-  const grid = document.createElement("div");
+  grid = document.createElement("div");
   grid.className = "grid";
 
   ALL_CHARACTERS.forEach(([slug, name]) => {
@@ -135,9 +136,16 @@ function buildCard(slug, name) {
   card.addEventListener("click", () => {
     const flipped = card.classList.toggle("flipped");
     card.setAttribute("aria-pressed", String(flipped));
+    updateOpenCount();
   });
 
   return card;
+}
+
+function updateOpenCount() {
+  const openCount = ALL_CARDS.filter((card) => !card.classList.contains("flipped")).length;
+  document.getElementById("open-counter").textContent =
+    `Open Cards: ${openCount} / ${ALL_CARDS.length}`;
 }
 
 function resetCards() {
@@ -145,6 +153,17 @@ function resetCards() {
     card.classList.remove("flipped");
     card.setAttribute("aria-pressed", "false");
   });
+  updateOpenCount();
+}
+
+function resetCardOrder() {
+  ALL_CARDS.forEach((card) => grid.appendChild(card));
+}
+
+function reorganizeCards() {
+  const open = ALL_CARDS.filter((card) => !card.classList.contains("flipped"));
+  const closed = ALL_CARDS.filter((card) => card.classList.contains("flipped"));
+  [...open, ...closed].forEach((card) => grid.appendChild(card));
 }
 
 function startNewGame() {
@@ -160,13 +179,16 @@ function startNewGame() {
   reveal.classList.add("active");
 
   resetCards();
+  resetCardOrder();
 }
 
 function init() {
   buildBoard();
   document.getElementById("character-count").textContent =
     `${ALL_CHARACTERS.length} characters from the Wizarding World.`;
+  updateOpenCount();
   document.getElementById("new-game-btn").addEventListener("click", startNewGame);
+  document.getElementById("reorganize-btn").addEventListener("click", reorganizeCards);
 }
 
 document.addEventListener("DOMContentLoaded", init);

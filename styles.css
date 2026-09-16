@@ -46,6 +46,20 @@ header p {
   line-height: 1.5;
 }
 
+.open-counter {
+  display: inline-block;
+  margin-top: 1.25rem;
+  padding: 0.5rem 1.4rem;
+  border-radius: 999px;
+  background: rgba(201, 162, 39, 0.12);
+  border: 1px solid rgba(201, 162, 39, 0.4);
+  color: var(--gold-bright);
+  font-family: "Cinzel Decorative", "Georgia", serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 .board {
   max-width: 1200px;
   margin: 0 auto;
@@ -155,21 +169,32 @@ footer {
   padding-top: 1rem;
 }
 
-.new-game-btn {
+.footer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+
+.new-game-btn,
+.reorganize-btn {
   appearance: none;
   font-family: "Cinzel Decorative", "Georgia", serif;
   font-size: 1rem;
   font-weight: 700;
   letter-spacing: 0.03em;
+  border-radius: 999px;
+  padding: 0.85rem 2.4rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.new-game-btn {
   color: var(--bg-deep);
   background: linear-gradient(180deg, var(--gold-bright), var(--gold));
   border: none;
-  border-radius: 999px;
-  padding: 0.85rem 2.4rem;
-  margin-top: 1rem;
-  cursor: pointer;
   box-shadow: 0 6px 18px rgba(201, 162, 39, 0.35);
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .new-game-btn:hover {
@@ -177,7 +202,21 @@ footer {
   box-shadow: 0 10px 22px rgba(201, 162, 39, 0.5);
 }
 
-.new-game-btn:active {
+.reorganize-btn {
+  color: var(--gold-bright);
+  background: transparent;
+  border: 2px solid rgba(201, 162, 39, 0.55);
+  box-shadow: none;
+}
+
+.reorganize-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(201, 162, 39, 0.12);
+  border-color: var(--gold-bright);
+}
+
+.new-game-btn:active,
+.reorganize-btn:active {
   transform: translateY(0);
 }
 
@@ -276,9 +315,16 @@ footer {
     font-size: 0.62rem;
   }
 
-  .new-game-btn {
-    padding: 0.7rem 1.8rem;
-    font-size: 0.9rem;
+  .new-game-btn,
+  .reorganize-btn {
+    padding: 0.7rem 1.6rem;
+    font-size: 0.85rem;
+  }
+
+  .open-counter {
+    margin-top: 0.9rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.78rem;
   }
 }
 
