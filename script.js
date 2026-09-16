@@ -19,18 +19,18 @@ const CATEGORIES = [
     ],
   },
   {
-    title: "The Hogwarts Students — Slytherin, Ravenclaw & Hufflepuff",
+    title: "The Hogwarts Students — Ravenclaw, Hufflepuff & Slytherin",
     characters: [
-      ["draco-malfoy", "Draco Malfoy"],
       ["luna-lovegood", "Luna Lovegood"],
-      ["cedric-diggory", "Cedric Diggory"],
       ["cho-chang", "Cho Chang"],
+      ["padma-patil", "Padma Patil"],
+      ["parvati-patil", "Parvati Patil"],
+      ["cedric-diggory", "Cedric Diggory"],
+      ["draco-malfoy", "Draco Malfoy"],
       ["pansy-parkinson", "Pansy Parkinson"],
       ["blaise-zabini", "Blaise Zabini"],
       ["vincent-crabbe", "Vincent Crabbe"],
       ["gregory-goyle", "Gregory Goyle"],
-      ["padma-patil", "Padma Patil"],
-      ["parvati-patil", "Parvati Patil"],
     ],
   },
   {
