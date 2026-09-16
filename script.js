@@ -21,10 +21,10 @@ const CATEGORIES = [
   {
     title: "The Hogwarts Students — Ravenclaw, Hufflepuff & Slytherin",
     characters: [
+      ["parvati-patil", "Parvati Patil"],
+      ["padma-patil", "Padma Patil"],
       ["luna-lovegood", "Luna Lovegood"],
       ["cho-chang", "Cho Chang"],
-      ["padma-patil", "Padma Patil"],
-      ["parvati-patil", "Parvati Patil"],
       ["cedric-diggory", "Cedric Diggory"],
       ["draco-malfoy", "Draco Malfoy"],
       ["pansy-parkinson", "Pansy Parkinson"],
